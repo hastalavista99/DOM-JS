@@ -77,7 +77,7 @@ function changeBgColor() {
 };
 
 newBackgroundColor.addEventListener("mouseover", changeBgColor);
-*/
+
 
 //Reveal Event
 
@@ -94,6 +94,31 @@ function revealContent() {
 }
 
 revealBtn.addEventListener('click', revealContent);
+*/
+
+//Event Delegation
+
+//It allows users to append a Single event listener to a parent element that adds it to all of its present and future descedants that match a selector. This saves memory and unnecessary code
+
+document.querySelector('#sports').addEventListener('click', function(e) {
+
+    console.log(e.target.getAttribute('id') + ' is clicked');
+
+    const target = e.target;
+
+    if (target.matches('button')) {
+        target.style.backgroundColor = 'lightgrey';
+    }
+})
+//lets add a new button to our empty list item
+const sports = document.querySelector('#list');
+const newSport = document.createElement('button');
+
+
+newSport.innerText = 'Rugby';
+newSport.setAttribute('id', 'rugby');
+
+sports.appendChild(newSport);//adding to unordered list
 
 
 

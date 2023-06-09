@@ -9,6 +9,8 @@
         body {
             background-color: rgb(79, 79, 128);
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: grid;
+            place-items: center;
         }
 
         .container {
@@ -75,11 +77,58 @@
         .hidden-content.reveal-btn {
             display: block;
         }
+
+        #sports {
+            width: 30%;
+            height: 100%;
+            border: 2px solid white;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            list-style-type: none;
+            box-sizing: border-box;
+
+        }
+
+        #football {
+            margin: 5px;
+            color: white;
+            padding: 5px;
+        }
+        #basketball {
+            margin: 5px;
+            color: white;
+            padding: 5px;
+        }
+        #boxing {
+            margin: 5px;
+            color: white;
+            padding: 5px;
+        }
+        #tennis {
+            margin: 5px;
+            color: white;
+            padding: 5px;
+        }
+        #golf {
+            margin: 5px;
+            color: white;
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
 
-    <h1 id="main-heading">Event Listeners</h1>
+    <ul id="sports">
+        <li><button id="football">Football</button></li>
+        <li><button id="basketball">Basketball</button></li>
+        <li><button id="boxing">Boxing</button></li>
+        <li><button id="tennis">Tennis</button></li>
+        <li><button id="golf">Golf</button></li>
+        <li id="list"></li>
+    </ul>
+
+    <!--<h1 id="main-heading">Event Listeners</h1>
 
     <div class="container">
         <button class="reveal-btn boxes">Reveal More</button>
@@ -88,7 +137,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquid quos perferendis nesciunt, velit ullam cumque praesentium iusto blanditiis illo modi facere optio doloremque laboriosam deleniti culpa nulla alias repudiandae.
         </div>
 
-        <!--<div class="boxes box-1">
+        <div class="boxes box-1">
             <h1 id="heading"> Example 1</h1>
             <button onclick="alert('I love JavaScript')">Enter</button>
         </div>
@@ -99,8 +148,8 @@
         <div class="boxes box-3">
             <h1 id="heading"> Example 3</h1>
             <button class="btn-3">Enter</button>
-        </div>-->
-    </div>
+        </div>
+    </div>-->
 
     <script src="app.js"></script>
 
